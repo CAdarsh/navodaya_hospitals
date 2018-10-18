@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Doctors</title>
+</head>
+<body>
+    <style>
+        *{
+         overflow-x: hidden;
+         padding: 0;
+         margin: 0;
+            }
+        
+        nav{
+         height: 12vh;
+         width: 100vw;
+         position: fixed;
+         z-index: 1;
+         background-color:#f1f2f6;
+        }
+        .nav-adjuster{
+            height: 7vh;
+            width: 100vw;
+            padding-top: 2.5vh;
+            font-weight: 900;
+            font-family: 'Playfair Display', serif;
+        }
+        .hamburger{
+            margin-left:6vw;
+            margin-right: 27vw;
+                 }
+                 
+        .hamburger1 {
+            margin-left: 2vw;
+            margin-right: 3vw;
+        }
+        .logo-main{
+            font-size: 2em; 
+        }
+        
+        
+        .hamburgerIcon{
+                height: 3vh;
+                width: 8vw;
+        }
+        .side-bar{
+            position: fixed;
+            display:block;
+            height:100vh;
+            width:0;
+            z-index: 3;
+            background-color: #f1f2f6;
+            transition: width 0.5s;
+            box-shadow:1px 1px 10px grey;
+        }
+        .side-bar-header{
+            font-size:2rem;
+            font-style:bold;
+        }
+        .open-side-bar{
+            width:58vw;
+        }
+        ul{
+            list-style-type: none;
+            text-align:center;
+        }
+        ul li{
+            padding:1rem;
+        }
+        a{
+            text-decoration: none;
+        }
+       .side-bar hr{
+           border-style:ridge;
+       } 
+       .side-bar-back{
+           padding: 1rem;
+           font-size: 1.75rem;
+           text-align:center;
+
+       }
+       .side-bar-text{
+           display: inline-block;
+           font-size:1.3rem;
+           color:black;
+           position:inherit;
+           font-style:italic;
+       }
+       .bottom-side-bar{
+           bottom:0;
+
+       }
+       .whole-body{
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        opacity: 0;
+        background-color: black;
+        transition: 1s opacity;
+       }
+     .main-doctors{
+           padding-top:15vh;
+           background-color:#f1f2f6;
+       
+       }
+       .main-doctors h1{
+           text-align:center;
+           font-weight:400;
+           font-family: 'Playfair Display', serif;
+           padding-bottom:5%;
+       }
+       .doc1{
+           border-width:2px;
+           border-color:#a9aac6;
+           border-style:solid;background-image:linear-gradient(top,#f1f2f6,#a9aac6);
+           margin-left:5%;
+           margin-right:5%;
+           background-color:white;
+       }
+       .doc1 h2{
+           padding-top:5%;
+           padding-bottom:5%;
+           text-align:center;
+           font-weight:300;
+           font-style:italic;
+           font-family: 'Playfair Display', serif;
+       }
+       .doc1 img{
+           margin-left:5%;
+           margin-right:5%;
+           margin-bottom:5%;
+           width:80vw;
+           height:40vh;
+           border-color:#a9aac6;
+           border-style:solid;
+       }
+       p{
+           padding-left:5%;
+           padding-right:5%;
+           padding-bottom:5%;
+           font-family:'Playfair Display', serif;
+           font-size:1.4rem;
+       }
+    </style>
+    <div class="whole-body"> </div>
+    <div class="side-bar">
+        <div class="side-bar-back">
+        <span class="side-bar-header"> MENU </span>    
+        <hr>
+    </div> 
+       
+        <ul>
+            <li> <a class="side-bar-text hamburger1">Back</a> <hr> </li>
+            <li> <a class="side-bar-text" href="/">Doctors</a> <hr> </li>
+            <li> <a class="side-bar-text" href="/">Facilities</a> <hr> </li>
+            <li> <a class="side-bar-text" href="/">Pharmacy</a> <hr> </li>
+            <li> <a class="side-bar-text" href="/">Wards</a> <hr> </li>
+            <li> <a class="side-bar-text" href="/">Location</a> <hr> </li>
+            <li> <a class="side-bar-text" href="/" href="tel:+15555551212">Contact</a> <hr> </li>
+        </ul>
+    </div>
+<nav>
+        <div class="nav-adjuster">
+        <span class="hamburger">
+                <img class = "hamburgerIcon" src="Asset 1.svg" alt="menu">
+        </span>
+        <span class="logo-main">NH.</span>    
+    </nav>
+    <div class='main-doctors'>
+    <h1>Doctors</h1>
+    <div class='doc1'>
+    <h2>Dr.Rashmi Temker</h2>
+    <img src='rashmi.jpg' alt='Dr.Rashmi Temker'>
+    <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor venenatis lectus, at finibus tortor mollis ac. Donec eget magna at mi mattis finibus. Nam nec lacinia sapien. Duis ullamcorper orci eget dolor laoreet blandit. Nunc mattis mauris orci, eu placerat ex suscipit vel. Donec mollis viverra mauris, ut commodo nulla volutpat sagittis. Mauris a quam purus. Sed lacinia dolor eu lectus tempus pretium. Quisque porttitor malesuada nibh. Maecenas dapibus condimentum efficitur. Duis eu neque sit amet felis feugiat vulputate pellentesque vitae eros.
+    </p>
+    <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor venenatis lectus, at finibus tortor mollis ac. Donec eget magna at mi mattis finibus. Nam nec lacinia sapien. Duis ullamcorper orci eget dolor laoreet blandit. Nunc mattis mauris orci, eu placerat ex suscipit vel. Donec mollis viverra mauris, ut commodo nulla volutpat sagittis. Mauris a quam purus. Sed lacinia dolor eu lectus tempus pretium. Quisque porttitor malesuada nibh. Maecenas dapibus condimentum efficitur. Duis eu neque sit amet felis feugiat vulputate pellentesque vitae eros.
+    </p>
+    </div>
+    </div>
+    <script>
+        var menuButton = document.getElementsByClassName("hamburger")[0];
+        var sideBar = document.getElementsByClassName("side-bar")[0];
+        var sideBarBack = document.getElementsByClassName("hamburger1")[0];
+    
+       menuButton.addEventListener('click',function(){
+            // sideBar.classList.add('open-side-bar');
+            
+           sideBar.style.width = '58vw'; });
+    
+        sideBarBack.addEventListener('click',function(){
+            // sideBar.classList.add('open-side-bar');
+            sideBar.style.width = '0vw';
+         });
+       </script>
+</body>
+</html>
