@@ -17,7 +17,6 @@
          padding: 0;
          margin: 0;
             }
-        
         nav{
          height: 12vh;
          width: 100vw;
@@ -115,7 +114,8 @@
            font-size:1.3rem;
            color:black;
            position:inherit;
-           font-style:italic;
+           font-family: 'Playfair Display', serif;
+           cursor: pointer;
        }
        .section-title{
         font-size: 2.5rem;
@@ -131,9 +131,8 @@
         padding-top: 2rem;
         width:100vw; 
        }
-       .doctor-section{
+       .doctor-section5,.doctor-section1,.doctor-section2,.doctor-section3,.doctor-section4{
         width: 100vw;
-        height: 36rem;
         background-color: #f1f2f6;
         padding-top: 1rem;
        }
@@ -143,7 +142,7 @@
         box-shadow: 5px 11px 53px 0px rgba(172,173,176,1);
         margin: 2rem;
         border: solid #a9aac6;
-        height: 30rem;
+        padding-bottom: 2rem; 
         width: calc(100% - 4rem); 
        }
        .doctor-picture{
@@ -200,19 +199,127 @@
        }
        .footer-container{
            background-color: white;
-           width:100vw;
-           height: 100vh;
+           width: 100vw;
        }
        .address-container{
-           width:100vw;
-           height:50vh;
-           padding-top: 3vh;
-           text-align: center;
+         width: 100vw;
+         height: 20vh;
+         padding-top: 3vh;
+        text-align: center;
        }
        #google-map-container{
-            width:100%;
-            height:50%;
+        height: 20vh;
+        width: 80vw;
+        padding-bottom: 5vh;
+        margin-left: 14vw;
+        margin-right: 14vw;
           }
+          .footer-title{
+    width:100vw;
+    text-align: center;
+    color: black;
+     font-size: 2rem;
+     padding-bottom: 0.5rem;
+        letter-spacing: 2px;
+        border-bottom: dashed #f1f2f6;   
+        font-weight: 400; 
+        font-family: 'Playfair Display', serif;
+}
+.contact-footer{
+    height:15rem;
+    background-color: #f1f2f6;
+    margin-top: 4rem;
+}
+.footer-logo-container{
+    height: 15vh;
+    width: 100vw;
+    padding-left: 10vw; 
+    margin-top: 3vh;  
+}
+.footer-logo{
+    margin-right: 5.5vw;
+    margin-left: 2.5vw;
+    height: 75px;
+    width: 75px;    
+    background-size: cover;  
+    background-repeat: no-repeat;  
+    display: inline-block;
+}
+#facebook-logo{
+    background-image: url("facebook.png");
+}
+#instagram-logo{
+    background-image: url("instagram.png");
+}
+#telephone-logo{
+    background-image: url("telephone.png");
+}
+@media only screen and (min-width:500px){
+            .hamburger{
+                margin-right: 31.5vw;
+            }
+            .main-background{
+                height: 95vh;
+            }
+            .header-text{
+                margin-top:40vh;
+                font-size: 3rem;
+            }
+            .header-text-sml{
+                font-size: 1.7rem;
+                color: grey;
+            }
+            .doctor-section1{
+                float:left;
+                width: 40vw;
+                margin-left: 5%;
+            }
+            .doctor-section2{
+                float: right;
+                width: 40vw;
+                margin-right: 5%;
+            }
+            .doctor-main-container{
+                background-color:#f1f2f6;
+                padding-bottom: 3%;
+            }
+            .doctor-section3{
+                margin-left: 5%;
+                float:left;
+                width:40vw;
+            }
+            .doctor-section4{
+                margin-right: 5%;
+                float: right;
+                width: 40vw;
+            }
+            .facility-picture{
+                width: 400px;
+            }
+            .doctor-section5{
+                width:40vw;
+                padding-left: 30vw;
+                padding-right: 30vw;
+                padding-bottom: 3%;
+            }
+            #google-map-container{
+                height:65vh;
+                padding-bottom: 0;
+            }
+            iframe{
+                width: 50vw;
+                height: 50vh;
+                margin-left: 12vw;
+            }
+            .contact-footer{
+                margin-top:0;
+                padding-top: 3%;
+                
+            }
+            .footer-logo-container{
+                margin-left: 20vw;
+                margin-top: 10vh;
+            }
     </style>
      <div class="side-bar">
         <div class="side-bar-back">
@@ -222,11 +329,12 @@
        
         <ul>
             <li> <a class="side-bar-text hamburger1">Back</a> <hr> </li>
-            <li> <a class="side-bar-text" href="/">Doctors</a> <hr> </li>
-            <li> <a class="side-bar-text" href="/">Facilities</a> <hr> </li>
-            <li> <a class="side-bar-text" href="/">Pharmacy</a> <hr> </li>
-            <li> <a class="side-bar-text" href="/">Wards</a> <hr> </li>
-            <li> <a class="side-bar-text" href="/" href="tel:+15555551212">Contact</a> <hr> </li>
+            <li> <a class="side-bar-text" href="#doctors" onclick="slide_back()">Doctors</a> <hr> </li>
+            <li> <a class="side-bar-text" href="#facilities" onclick="slide_back()">Facilities</a> <hr> </li>
+            <li> <a class="side-bar-text" href="#pharmacy" onclick="slide_back()">Pharmacy</a> <hr> </li>
+            <li> <a class="side-bar-text" href="photo_gallery_static_files/photo_gallery.html" onclick="slide_back()">Photo Gallery</a> <hr> </li>
+            <li> <a class="side-bar-text" href="video_gallery_static_files/video_gallery.html" onclick="slide_back()">Video Gallery</a> <hr> </li>
+            <li> <a class="side-bar-text"  href="tel:080-27524842">Contact</a> <hr> </li>
         </ul>
     </div>
     <nav>
@@ -244,13 +352,15 @@
             </div>
         </div>
        <div class="div-section"> 
-        <div class="section-title">Doctors</div>   
+            <span id="doctors">
+                </span>
+        <div class="section-title">  Doctors</div>   
          </div>
-         
-         <div class="doctor-section">
+         <div class="doctor-main-container">
+         <div class="doctor-section1">
          <div class="doctor-section-container">
              <div class="doctor-picture"></div>
-             <div class="doctor-name">Dr.Rashmi Temkar</div>
+             <div class="doctor-name">Dr.Rashmi Temker</div>
              <div class="doctor-content">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere, nisl eget lacinia pulvinar, 
                     orci neque bibendum arcu, a sodales lorem est vitae orci. Phasellus quam purus,
@@ -259,12 +369,11 @@
              </div> 
          </div>
         </div>
-
-        
-        <div class="doctor-section">
+         
+        <div class="doctor-section2">
                 <div class="doctor-section-container">
                     <div class="doctor-picture1"></div>
-                    <div class="doctor-name">Dr.Chetan Temkar</div>
+                    <div class="doctor-name">Dr.Chetan Temker</div>
                     <div class="doctor-content">
                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere, nisl eget lacinia pulvinar, 
                            orci neque bibendum arcu, a sodales lorem est vitae orci. Phasellus quam purus,
@@ -273,10 +382,14 @@
                     </div> 
                 </div>
                </div>
+            </div>
                <div class="div-section"> 
+                    <span id="facilities">
+                        </span>
                 <div class="section-title">Facilities</div>   
                  </div>
-                 <div class="doctor-section">
+                 <div class="doctor-main-container">
+                 <div class="doctor-section3">
                     <div class="doctor-section-container">
                         <div class="facility-picture">
                         </div>
@@ -289,10 +402,32 @@
                         </div> 
                     </div>
                    </div>
-                   <div class="doctor-section">
+                   
+                   <div class="doctor-section4">
+                        <div class="doctor-section-container">
+                            <div class="facility-picture-rooms facility-picture">
+                            </div>
+                            <div class="doctor-name">World-Class Consultation Rooms</div>
+                            <div class="doctor-content">
+                                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere, nisl eget lacinia pulvinar, 
+                                   orci neque bibendum arcu, a sodales lorem est vitae orci. Phasellus quam purus,
+                                    malesuada nec laoreet a, ullamcorper sed erat. 
+                                   Suspendisse ultrices risus sed posuere faucibus.
+                            </div> 
+                        </div>
+                       </div>
+                    </div>
+                       <div class="div-section"> 
+                            <span id="pharmacy">
+                                </span>
+                        <div class="section-title">Pharmacy</div>   
+                         </div>
+                   <div class="doctor-section5">
                     <div class="doctor-section-container">
                         <div class="facility-picture facility-picture-pharmacy">
                         </div>
+                        
+                            
                         <div class="doctor-name">Pharmacy</div>
                         <div class="doctor-content">
                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere, nisl eget lacinia pulvinar, 
@@ -302,22 +437,11 @@
                         </div> 
                     </div>
                    </div>
-                   <div class="doctor-section">
-                    <div class="doctor-section-container">
-                        <div class="facility-picture-rooms facility-picture">
-                        </div>
-                        <div class="doctor-name">World-Class Consultation Rooms</div>
-                        <div class="doctor-content">
-                               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere, nisl eget lacinia pulvinar, 
-                               orci neque bibendum arcu, a sodales lorem est vitae orci. Phasellus quam purus,
-                                malesuada nec laoreet a, ullamcorper sed erat. 
-                               Suspendisse ultrices risus sed posuere faucibus.
-                        </div> 
-                    </div>
-                   </div>
+                 
                    <footer>
                        <div class="footer-container">
                         <div class="div-section"> 
+                            <div id="location"></div>
                             <div class="section-title">  Location </div>   
                              </div>
                              <div class="address-container">
@@ -327,37 +451,34 @@
                              deleniti perferendis porro quibusdam eligendi dicta molestiae officiis. </div>
                             </div>
                             <div id="google-map-container">
-
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15578.360954300018!2d77.4205463!3d12.5432823!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd7b3aebe89861a90!2sNavodaya+Arogya+Kendra!5e0!3m2!1sen!2sin!4v1539763328967"
+                            frameborder="0" style="border:0" allowfullscreen></iframe>
                             </div>
+                       </div>
+                       <div class="contact-footer">
+                         <div class=" footer-title">Connect with us</div> 
+                         <div class="footer-logo-container">
+                             <div class="footer-logo" id="facebook-logo"></div>
+                             <div class="footer-logo" id="instagram-logo"></div>
+                             <div class="footer-logo" id="telephone-logo"></div>
+                         </div>
                        </div>
                    </footer>
     </header>
-</div>
-<script>
-    // Initialize and add the map
-    function initMap() {
-      // The location of Uluru
-      var uluru = {lat: -25.344, lng: 131.036};
-      // The map, centered at Uluru
-      var map = new google.maps.Map(
-          document.getElementById('google-map-container'), {zoom: 4, center: uluru});
-      // The marker, positioned at Uluru
-      var marker = new google.maps.Marker({position: uluru, map: map});
-    }
-        </script>
-        <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGe3Q9VNWEPwneDP88t4GsrohQwPu0VSo&callback=initMap">
-        </script>
+    </div>  
 
-<script>
+    <script>
     var menuButton = document.getElementsByClassName("hamburger")[0];
     var sideBar = document.getElementsByClassName("side-bar")[0];
     var sideBarBack = document.getElementsByClassName("hamburger1")[0];
-
    menuButton.addEventListener('click',function(){
         // sideBar.classList.add('open-side-bar');
-        
-       sideBar.style.width = '58vw'; });
+    if(window.screen.width<=500){
+            sideBar.style.width = '58vw';}
+        else
+        {
+            sideBar.style.width = '18vw'}
+        });
 
     sideBarBack.addEventListener('click',function(){
         // sideBar.classList.add('open-side-bar');
