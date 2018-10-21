@@ -229,21 +229,22 @@
     </div>
 
     <script>
-            var menuButton = document.getElementsByClassName("hamburger")[0];
-            var sideBar = document.getElementsByClassName("side-bar")[0];
-            var sideBarBack = document.getElementsByClassName("hamburger1")[0];
-            console.log("Hello");
-           menuButton.addEventListener('click',function(){
-                // sideBar.classList.add('open-side-bar');
-                
-               sideBar.style.width = '58vw'; });
-        
-            sideBarBack.addEventListener('click',function(){
-                // sideBar.classList.add('open-side-bar');
-                sideBar.style.width = '0vw';
-             });
-            
+        var menuButton = document.getElementsByClassName("hamburger")[0];
+        var sideBar = document.getElementsByClassName("side-bar")[0];
+        var sideBarBack = document.getElementsByClassName("hamburger1")[0];
+       menuButton.addEventListener('click',function(){
+            // sideBar.classList.add('open-side-bar');
+        if(window.screen.width<=500){
+                sideBar.style.width = '58vw';}
+            else
+            {
+                sideBar.style.width = '18vw'}
+            });
     
-           </script>
+        sideBarBack.addEventListener('click',function(){
+            // sideBar.classList.add('open-side-bar');
+            sideBar.style.width = '0vw';
+         });
+       </script>
 </body>
 </html>
