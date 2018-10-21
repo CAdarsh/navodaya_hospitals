@@ -20,7 +20,7 @@
          width: 100vw;
          position: fixed;
          z-index: 1;
-         background-color: #f1f2f6;
+         background-color:#f1f2f6;
         }
         .nav-adjuster{
             height: 7vh;
@@ -42,18 +42,25 @@
             font-size: 2em; 
         }
         
-        
+           
+       
         .hamburgerIcon{
                 height: 3vh;
                 width: 8vw;
         }
         .side-bar{
             position: fixed;
+            display:block;
             height:100vh;
-            width:0vw;
+            width:0;
             z-index: 3;
             background-color: #f1f2f6;
             transition: width 0.5s;
+            box-shadow:1px 1px 10px grey;
+        }
+        .side-bar-header{
+            font-size:2rem;
+            font-style:bold;
         }
         .open-side-bar{
             width:58vw;
@@ -65,7 +72,6 @@
 
        .side-bar-back{
            padding: 1rem;
-           background-color: antiquewhite;
            font-size: 1.75rem;
        }
        .side-bar-text{
@@ -80,6 +86,42 @@
         font-weight: 400;   
         text-align: center;
         font-family: 'Playfair Display', serif;   
+       }
+       ul{
+            list-style-type: none;
+            text-align:center;
+        }
+        ul li{
+            padding:1rem;
+        }
+        a{
+            text-decoration: none;
+        }
+       .side-bar hr{
+           border-style:ridge;
+       } 
+       .side-bar-back{
+           padding: 1rem;
+           font-size: 1.75rem;
+           text-align:center;
+       }
+       .side-bar-text{
+           display: inline-block;
+           font-size:1.3rem;
+           color:black;
+           position:inherit;
+           font-family: 'Playfair Display', serif;
+       }
+       .bottom-side-bar{
+           bottom:0;
+       }
+       .whole-body{
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        opacity: 0;
+        background-color: black;
+        transition: 1s opacity;
        }
        .div-section{
         padding-top: 2rem;
@@ -130,34 +172,38 @@
         background-color: black;
         transition: 1s opacity;
     }
+    @media only screen and (min-width:500px){
+        iframe{
+            height: 63vh;
+        }
+        .video-container{
+            height: 65vh;
+            margin-left: 7%;
+        }
+    }
     </style>
-    <div class="side-bar">
+   
+   <div class="side-bar">
         <div class="side-bar-back">
-            <span class="hamburger1">
-                <img class = "hamburgerIcon" src="Asset 1.svg" alt="menu">
-        </span>
-        <span class="side-bar-text side-bar-header"> MENU </span>     
+        <span class="side-bar-header"> MENU </span>    
+        <hr>
     </div> 
        
-        <ul>
-            <li > <a class="side-bar-text" href="/">Doctors</a> </li>
-            <li> <a class="side-bar-text" href="/">Facilities</a> </li>
-            <li> <a class="side-bar-text" href="/">Pharmacy</a> </li>
-            <li> <a class="side-bar-text" href="/">Wards and Beds</a> </li>
-            <li> <a class="side-bar-text" href="/">Location</a> </li>
+        <ul>       <li> <a class="side-bar-text hamburger1">Back</a> <hr> </li>
+            <li> <a class="side-bar-text" href="\#doctors">Doctors</a> <hr> </li>
+            <li> <a class="side-bar-text" href="\#facilities" >Facilities</a> <hr> </li>
+            <li> <a class="side-bar-text" href="\#pharmacy" >Pharmacy</a> <hr> </li>
+            <li> <a class="side-bar-text" href="../photo_gallery_static_files/photo_gallery.html" >Photo Gallery</a> <hr> </li>
+            <li> <a class="side-bar-text"  href="tel:080-27524842">Contact</a> <hr> </li>
         </ul>
-        <span>Contact: 
-            <a href="tel:+15555551212">Phone</a>
-        </span>
     </div>
-    <nav>
+<nav>
         <div class="nav-adjuster">
-        <span class="hamburger">
+        <span class="hamburger">￼
                 <img class = "hamburgerIcon" src="Asset 1.svg" alt="menu">
         </span>
         <span class="logo-main">NH.</span>    
     </nav>
-    <div class="whole-body"> </div>
     <div class="div-section">  
         <div class="section-title">Video Gallery</div>   
          </div>
@@ -182,21 +228,22 @@
         Verge Does it Again Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut ipsam explicabo rerum, non aspernatur ipsum laudantium laboriosam cumque nulla amet quos, perferendis soluta ut porro a reprehenderit consequatur qui tenetur.
     </div>
 
-   <script>
-        var menuButton = document.getElementsByClassName("hamburger")[0];
-        var sideBar = document.getElementsByClassName("side-bar")[0];
-        var sideBarBack = document.getElementsByClassName("hamburger1")[0];
+    <script>
+            var menuButton = document.getElementsByClassName("hamburger")[0];
+            var sideBar = document.getElementsByClassName("side-bar")[0];
+            var sideBarBack = document.getElementsByClassName("hamburger1")[0];
+            console.log("Hello");
+           menuButton.addEventListener('click',function(){
+                // sideBar.classList.add('open-side-bar');
+                
+               sideBar.style.width = '58vw'; });
+        
+            sideBarBack.addEventListener('click',function(){
+                // sideBar.classList.add('open-side-bar');
+                sideBar.style.width = '0vw';
+             });
+            
     
-       menuButton.addEventListener('click',function(){
-            // sideBar.classList.add('open-side-bar');
-           document.getElementsByClassName("whole-body")[0].style.opacity="0.4"; 
-           sideBar.style.width = '58vw'; });
-    
-        sideBarBack.addEventListener('click',function(){
-            // sideBar.classList.add('open-side-bar');
-            sideBar.style.width = '0vw';
-            document.getElementsByClassName("whole-body")[0].style.opacity="0"; 
-         });
-       </script>
+           </script>
 </body>
 </html>
